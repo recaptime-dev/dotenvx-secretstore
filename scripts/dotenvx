@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+GIT_ROOT=$(git rev-parse --show-toplevel)
+CWD="$PWD"
+
+# This is a wrapper script for "npm exec dotenvx" within this repo, proceed
+# at your own risk if you do use this outside.
+
+if [ ! -d "$GIT_ROOT/node_modules/@dotenvx/dotenvx" ]; then
+    echo "warning: looks like dotenvx cli is not yet installed, running 'npm i' for you"
+    if [[ "$CWD" != "$GIT_ROOT" ]]; then
+        cd "$GIT_ROOT"
+    fi
+    npm i
+    if [[ "$CWD" != "$GIT_ROOT" ]]; then
+        cd "$CWD" || {
+            echo "error: something went wrong while going back to $CWD"
+            exit 1
+        }
+    fi
+fi
+
+exec npm exec dotenvx "$@"

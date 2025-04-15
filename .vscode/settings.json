@@ -1,0 +1,7 @@
+{
+    // VS Code stuff
+    "git.alwaysSignOff": true,
+    // Firebase Studio settings
+    "IDX.aI.enableInlineCompletion": true,
+    "IDX.aI.enableCodebaseIndexing": true
+}

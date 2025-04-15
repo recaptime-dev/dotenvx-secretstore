@@ -1,0 +1,22 @@
+{
+  "name": "@recaptime-dev/dotenvx-secretstore",
+  "version": "1.0.0",
+  "description": "@recaptime-dev's centralized repo for managing dotenvx-encrypted secrets a la pass",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/recaptime-dev/infra/dotenvx-secretstore.git"
+  },
+  "author": "",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://gitlab.com/recaptime-dev/infra/dotenvx-secretstore/issues"
+  },
+  "homepage": "https://gitlab.com/recaptime-dev/infra/dotenvx-secretstore#readme",
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.40.0",
+    "@dotenvx/dotenvx-pro": "^0.17.5"
+  }
+}
