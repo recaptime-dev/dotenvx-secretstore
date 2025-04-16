@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Initialize a new project in the secret store with some template files
+
+set -eo pipefail
+
+# Get the root directory of the Git repository.
+GIT_ROOT=$(git rev-parse --show-toplevel)
+
+# Check if the project slug is provided.
+if [[ -z "$1" ]]; then
+  echo "usage: $0 <project-slug>"
+  exit 1
+fi
+
+# Construct the full path to the project directory.
+PROJECT_DIR="$GIT_ROOT/projects/$1"
+
+# Check if the project directory already exists.
+if [[ -f "$PROJECT_DIR/.existing-project" ]]; then
+  echo "existing project found: $1"
+  exit 1
+fi
+
+# Create the project directory.
+if [[ ! -d "$PROJECT_DIR" ]]; then
+  mkdir "$PROJECT_DIR" -pv
+fi
+
+# Copy the contents of the 'templates' directory to the project directory.
+cp -av "$GIT_ROOT/template/." "$PROJECT_DIR/"

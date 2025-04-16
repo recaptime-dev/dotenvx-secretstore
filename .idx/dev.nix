@@ -12,6 +12,8 @@
     pkgs.hadolint
     pkgs.gh
     pkgs.glab
+    pkgs.doppler
+    pkgs._1password-cli
   ];
   # Sets environment variables in the workspace
   env = {
