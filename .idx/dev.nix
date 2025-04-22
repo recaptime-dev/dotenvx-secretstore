@@ -24,9 +24,12 @@
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
-      "WakaTime.vscode-wakatime"
+      # "WakaTime.vscode-wakatime"
       "timonwong.shellcheck"
       "vivaxy.vscode-conventional-commits"
+      "github.vscode-github-actions"
+      "GitHub.vscode-pull-request-github"
+      "GitLab.gitlab-workflow"
     ];
     # Enable previews
     previews = {
