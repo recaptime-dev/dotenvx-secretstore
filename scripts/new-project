@@ -28,3 +28,6 @@ fi
 
 # Copy the contents of the 'templates' directory to the project directory.
 cp -av "$GIT_ROOT/template/." "$PROJECT_DIR/"
+
+# finally add the new project to the directory
+echo "- [\`$1\`](./$1)" >>"$GIT_ROOT/projects/README.md"

@@ -1,6 +1,12 @@
-# `@recaptime-dev/dotenvx-secretstore`
+# `@recaptime-dev/dotenvx-secretstore` - centralized secret store
 
-This is the centralized project for managing secrets encrypted by `dotenvx` with Git.
+This is the centralized project for managing secrets encrypted by `dotenvx` with Git levels of audit trail for changes.
+
+## Usage
+
+**GitHub Actions**: Use [`dotenvx-action/remote-loader`](https://github.com/andreijiroh-dev/dotenvx-action/tree/main/remote-loader) action to load secrets from this repository.
+
+**GitLab CI and others**: Simply `wget` the file's raw URL somewhere and run with `dotenvx run` command.
 
 ## Open-in-CDE links
 

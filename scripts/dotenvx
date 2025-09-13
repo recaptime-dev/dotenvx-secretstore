@@ -2,6 +2,7 @@
 set -eo pipefail
 
 GIT_ROOT=$(git rev-parse --show-toplevel)
+PATH="$GIT_ROOT/node_modules/.bin:$PATH"
 CWD="$PWD"
 
 # This is a wrapper script for "npm exec dotenvx" within this repo, proceed
@@ -21,4 +22,5 @@ if [ ! -d "$GIT_ROOT/node_modules/@dotenvx/dotenvx" ]; then
     fi
 fi
 
-exec npm exec dotenvx "$@"
+export PATH=$PATH
+exec "$GIT_ROOT/node_modules/.bin/dotenvx" "$@"
