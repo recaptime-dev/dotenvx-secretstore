@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "@recaptime-dev's centralized repo for managing dotenvx-encrypted secrets a la pass",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deps:update": "ncu -u && npm install",
+    "update-deps": "npm run deps:update"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,10 @@
   },
   "homepage": "https://gitlab.com/recaptime-dev/infra/dotenvx-secretstore#readme",
   "dependencies": {
-    "@dotenvx/dotenvx": "^1.40.0",
-    "@dotenvx/dotenvx-pro": "^0.17.5"
+    "@dotenvx/dotenvx": "^1.49.0",
+    "@dotenvx/dotenvx-pro": "^0.26.0"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^18.1.1"
   }
 }
