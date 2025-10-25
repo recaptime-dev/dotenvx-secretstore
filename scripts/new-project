@@ -9,6 +9,9 @@ GIT_ROOT=$(git rev-parse --show-toplevel)
 # Check if the project slug is provided.
 if [[ -z "$1" ]]; then
   echo "usage: $0 <project-slug>"
+  echo
+  echo "Learn more: https://wiki.recaptime.dev/handbook/infraops/dotenvx-secretstore/setting-up-new-project"
+  echo "            or open docs/setting-up-new-project.md file in this repo."
   exit 1
 fi
 

@@ -22,6 +22,10 @@ You can use these buttons to setup a cloud environment for development if you do
 [fbs-open]: https://studio.firebase.google.com/import?url=https%3A%2F%2Fgithub.com%2Frecaptime-dev%2Fdotenvx-secretstore
 [fbs-quota]: https://firebase.google.com/docs/studio#pricing
 
+## Questions?
+
+File an issue at our Infrastructure repo: <https://gitlab.com/recaptime-dev/infra/ops/-/issues>
+
 ## License
 
 MPL-2.0
