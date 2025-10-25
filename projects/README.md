@@ -4,3 +4,4 @@
 - [`leeksbot`](./leeksbot)
 - [`hackclub-alumni`](./hackclub-alumni)
 - [`lorebooks-wiki`](./lorebooks-wiki)
+- [`hackclub-community`](./hackclub-community)
